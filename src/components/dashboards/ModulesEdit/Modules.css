@@ -1,0 +1,37 @@
+label.form-check-label {
+  margin: 0 !important;
+}
+
+/* styles.css */
+.scrollable-table-wrapper {
+  overflow: auto;
+  max-height: 275px;
+}
+
+.fixed-header-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.fixed-header-table thead tr th {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+@keyframes zoomInOut {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+  50% {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  }
+}
+
+.protected-badge {
+  animation: zoomInOut 1.5s infinite;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}

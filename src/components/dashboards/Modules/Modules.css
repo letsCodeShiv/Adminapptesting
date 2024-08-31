@@ -1,0 +1,20 @@
+label.form-check-label {
+  margin: 0 !important;
+}
+
+/* styles.css */
+.scrollable-table-wrapper {
+  overflow: auto;
+  max-height: 275px;
+}
+
+.fixed-header-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.fixed-header-table thead tr th {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
