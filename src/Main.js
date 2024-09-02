@@ -26,7 +26,7 @@ const Main = (props) => {
     showBurgerMenu: settings.showBurgerMenu,
     showSettingPanel: false,
     navbarCollapsed: false,
-    orgID: null,
+    orgId: null,
     orgName: null,
     agentId: null,
   };
@@ -40,10 +40,10 @@ const Main = (props) => {
   );
 
   useEffect(() => {
-    // Extract orgID, orgName and agentId from the URL
-    const { orgID, orgName, agentId } = queryString.parse(window.location.search);
-    if (orgID) {
-      setConfig("orgName", orgID);
+    // Extract orgId, orgName and agentId from the URL
+    const { orgId, orgName, agentId } = queryString.parse(window.location.search);
+    if (orgId) {
+      setConfig("orgId", orgId);
     }
     if (orgName) {
       setConfig("orgName", orgName);
@@ -66,7 +66,7 @@ const Main = (props) => {
           "navbarPosition",
           "isNavbarVerticalCollapsed",
           "navbarStyle",
-          "orgID",
+          "orgId",
           "orgName",
           "agentId",
         ].includes(key),

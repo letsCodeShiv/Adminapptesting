@@ -20,7 +20,7 @@ import { ClickedValueProvider } from "context/tableAgentContext";
 const App = () => {
   const HTMLClassList = document.getElementsByTagName("html")[0].classList;
   const {
-    config: { navbarPosition, orgID, orgName, agentId },
+    config: { navbarPosition, orgId, orgName, agentId },
   } = useContext(AppContext);
 
   useEffect(() => {
@@ -46,11 +46,11 @@ const App = () => {
   }, [navbarPosition]);
 
   useEffect(() => {
-    console.log("Org ID:", orgID);
+    console.log("Org ID:", orgId);
     console.log("Org Name:", orgName);
     console.log("Agent ID:", agentId);
     // You can now use orgName and agentId throughout your app
-  }, [orgID, orgName, agentId]);
+  }, [orgId, orgName, agentId]);
 
   return (
     <Router>
