@@ -28,6 +28,7 @@ const Main = (props) => {
     navbarCollapsed: false,
     orgId: null,
     orgName: null,
+    domainName: null,
     agentId: null,
   };
 
@@ -40,13 +41,16 @@ const Main = (props) => {
   );
 
   useEffect(() => {
-    // Extract orgId, orgName and agentId from the URL
-    const { orgId, orgName, agentId } = queryString.parse(window.location.search);
+    // Extract orgId, orgName, domainName and agentId from the URL
+    const { orgId, orgName, domainName, agentId } = queryString.parse(window.location.search);
     if (orgId) {
       setConfig("orgId", orgId);
     }
     if (orgName) {
       setConfig("orgName", orgName);
+    }
+    if (domainName) {
+      setConfig("domainName", domainName);
     }
     if (agentId) {
       setConfig("agentId", agentId);
@@ -68,6 +72,7 @@ const Main = (props) => {
           "navbarStyle",
           "orgId",
           "orgName",
+          "domainName",
           "agentId",
         ].includes(key),
       },
