@@ -39,7 +39,7 @@ const Main = (props) => {
   );
 
   useEffect(() => {
-    // Extract caseId and agentId from the URL
+    // Extract orgName and agentId from the URL
     const { orgName, agentId } = queryString.parse(window.location.search);
     if (orgName) {
       setConfig("orgName", orgName);

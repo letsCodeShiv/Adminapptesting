@@ -48,8 +48,8 @@ const App = () => {
   useEffect(() => {
     console.log("Org Name:", orgName);
     console.log("Agent ID:", agentId);
-    // You can now use caseId and agentId throughout your app
-  }, [caseId, agentId]);
+    // You can now use orgName and agentId throughout your app
+  }, [orgName, agentId]);
 
   return (
     <Router>
