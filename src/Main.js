@@ -42,7 +42,7 @@ const Main = (props) => {
 
   useEffect(() => {
     // Extract orgId, orgName, domainName and agentId from the URL
-    const { orgId, orgName, domainName, agentId } = queryString.parse(window.location.search);
+    const { orgId, orgName, domainName, agentId, email } = queryString.parse(window.location.search);
     if (orgId) {
       setConfig("orgId", orgId);
     }
@@ -54,6 +54,9 @@ const Main = (props) => {
     }
     if (agentId) {
       setConfig("agentId", agentId);
+    }
+    if (email) {
+      setConfig("agentEmail", email);
     }
   }, []);
 
@@ -74,6 +77,7 @@ const Main = (props) => {
           "orgName",
           "domainName",
           "agentId",
+          "email"
         ].includes(key),
       },
     });
